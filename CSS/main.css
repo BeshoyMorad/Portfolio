@@ -1,11 +1,12 @@
 /* save #004e95 */
 /* Start Global Variables */
 :root {
-  --main-color: #f07197;
+  --main-color: #c35274;
+  --background: rgb(229 222 222);
   --secondary-color: #013a6b;
   --backg: #4cbfff;
   --buttons: #E5446D;
-  --other: #2C4251;
+  --heading: #2C4251;
 }
 /* End Global Variables */
 /* Start Components */
@@ -14,18 +15,20 @@
 }
 .main-heading h2 {
   font-size: 40px;
-  margin-top: 40px;
+  padding-top: 40px;
   margin-bottom: 70px;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 500;
+  font-family: cursive, Ubuntu;
   position: relative;
+  color: var(--heading);
 }
 .main-heading h2::before {
   content: "";
   position: absolute;
   width: 120px;
   height: 2px;
-  background-color: #585353;
+  background-color: var(--heading);
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
@@ -36,18 +39,11 @@
   height: 15px;
   width: 15px;
   border-radius: 50%;
-  border: 2px solid #585353;
+  border: 2px solid var(--heading);
   background-color: white;
   left: 50%;
   transform: translateX(-50%);
   bottom: -24px;
-}
-.main-heading p {
-  width: 550px;
-  margin: 0 auto 70px;
-  line-height: 1.4;
-  max-width: 100%;
-  color: var(--p-color);
 }
 /* End Components */
 /* Start Global Rules */
@@ -107,6 +103,7 @@ header h2 {
   color: var(--main-color);
   text-transform: uppercase;
   padding: 20px;
+  font-family: cursive, Ubuntu;
 }
 header .container {
   display: flex;
@@ -276,10 +273,143 @@ header nav .icon:hover span:nth-child(2) {
 /* End About */
 
 /* Start The Skills */
+.skills {
+  background-color: var(--background);
+}
+.skills .skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills .skills-container .soft-container,
+.skills .skills-container .techno-container {
+  padding: 30px;
+  flex: 1;
+}
+.skills .soft-container h3,
+.skills .techno-container h3 {
+  font-size: 28px;
+  padding: 10px;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+.skills .skills-container .prog-holder {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.skills .skills-container .prog-holder h4 {
+  font-size: 18px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.skills .skills-container .prog-holder .progress {
+  min-width: 250px;
+  height: 35px;
+  border-radius: 15px;
+  background-color: #0000002e;
+}
+.skills .skills-container .prog-holder .progress span {
+  display: block;
+  height: 100%;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  position: relative;
+}
+.skills .skills-container .prog-holder .progress span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: #2f2f2f;
+  color: white;
+  width: 40px;
+  text-align: center;
+  border-radius: 4px;
+  top: -38px;
+  right: -14px;
+  padding: 4px 3px;
+}
+.skills .skills-container .prog-holder .progress span::after {
+  content: '';
+  position: absolute;
+  border: 13px solid;
+  border-color: #2f2f2f transparent transparent transparent;
+  top: -15px;
+  right: -3px;
+}
 /* End The Skills */
 
 /* Start The Projects */
-/* End The Projects */
 
+/* End The Projects */
+.projects {
+  background-color: var(--background);
+}
 /* Start The Contact */
+.contact {
+  background-color: #121111db;
+  box-shadow: inset 0px 0px 5px 0px #797171;
+}
+.contact .main-heading h2 {
+  color: var(--main-color);
+}
+.contact .main-heading h2::before {
+  background-color: var(--main-color);
+}
+.contact .main-heading h2::after {
+  border: 2px solid var(--main-color);
+}
+.contact .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px 40px 30px;
+}
+@media (max-width: 900px) {
+  .contact .contact-container {
+    justify-content: center;
+  }
+}
+.contact .contact-container .email-phone {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.contact .contact-container .email-phone .emails {
+  margin-bottom: 15px;
+}
+.contact .contact-container .email-phone .emails .link,
+.contact .contact-container .email-phone .phones span {
+  color: #c17289;
+  font-size: 22px;
+  font-weight: bold;
+}
+.contact .contact-container .social-icons {
+  font-size: 30px;
+  padding: 10px;
+  line-height: 89px;
+}
+.contact .contact-container .social-icons i {
+  color: white;
+  padding: 0 10px;
+  margin-right: 12px;
+}
+.contact .contact-container .social-icons i.facebook:hover {
+  color: #3B5998;
+}
+.contact .contact-container .social-icons i.linkedin:hover {
+  color: #0a66c2;
+}
+.contact .contact-container .social-icons i.github:hover {
+  color: #040204;
+}
+.contact > p {
+  color: white;
+  padding: 0 15px 16px;
+  text-align: center;
+  font-size: 19px;
+}
+.contact > p span {
+  font-weight: bold;
+  color: #c17289;
+}
 /* End The Contact */
