@@ -115,6 +115,7 @@ header .container {
 }
 header nav {
   display: flex;
+  align-items: center;
 }
 header nav ul {
   display: flex;
@@ -133,21 +134,7 @@ header nav ul li a {
 header nav ul li:hover a {
   color: var(--main-color);
 }
-header .icon {
-  color: white;
-  height: 26px;
-  font-size: 26px;
-  margin-right: 10px;
-  display: none;
-}
 @media (max-width: 768px) {
-  header .icon {
-    display: block;
-    cursor: pointer;
-  }
-  header .icon:hover {
-    color: var(--main-color);
-  }
   header nav ul {
     display: none;
     background-color: #070606d4;
@@ -165,6 +152,41 @@ header .icon {
   }
   header nav ul li:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+header nav .icon {
+  width: 30px;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  height: 19px;
+  margin-right: 12px;
+}
+header nav .icon:hover span {
+  background-color: var(--main-color);
+}
+header nav .icon span {
+  background-color: white;
+  height: 2px;
+  margin-bottom: 6px;
+}
+header nav .icon span:first-child {
+  width: 100%;
+}
+header nav .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+header nav .icon span:last-child {
+  width: 100%;
+}
+header nav .icon:hover span:nth-child(2) {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  header nav .icon {
+    display: flex;
+    cursor: pointer;
   }
 }
 /* End The Header */
@@ -208,16 +230,30 @@ header .icon {
   position: relative;
   top: 20px;
 }
+.about .about-box h3 {
+  color: white;
+  font-size: 24px;
+  text-align: left;
+  padding: 7px;
+  margin-left: 9px;
+}
 .about .about-box p {
   color: white;
   padding: 7px;
   font-size: 21px;
   line-height: 1.7;
 }
+.about .about-box p span {
+  font-weight: 500;
+}
 @media (max-width: 768px) {
   .about .about-box {
     width: calc(100% - 30px);
     top: 0;
+  }
+  .about .about-box h3 {
+    text-align: center;
+    margin-left: 0;
   }
 }
 .about .image,
