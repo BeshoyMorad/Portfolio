@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beshoy Morad</title>
-    <!-- Main Template CSS File -->
-    <link rel="stylesheet" href="CSS/main.css">
-    <!-- Render all elements Normally -->
-    <link rel="stylesheet" href="CSS/normalize.css">
+    <!-- BootStrap Framwork -->
+    <link rel="stylesheet" href="CSS/bootstrap.css">
     <!-- Font Awsome Library -->
     <link rel="stylesheet" href="CSS/all.min.css">
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="CSS/main.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- Scroll To Top Button -->
+    <span class="to-top" id="to-top-btn"><i class="fas fa-arrow-up"></i></span>
     <!-- Header -->
     <header>
       <div class="container">
@@ -63,25 +65,25 @@
             <div class="prog-holder">
               <h4>Leadership</h4>
               <div class="progress">
-                <span style="width: 70%" data-progress="70%"></span>
+                <span data-progress="70%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>Work under pressure</h4>
               <div class="progress">
-                <span style="width: 75%" data-progress="75%"></span>
+                <span data-progress="75%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>Time Management</h4>
               <div class="progress">
-                <span style="width: 80%" data-progress="80%"></span>
+                <span data-progress="80%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>Self Learning</h4>
               <div class="progress">
-                <span style="width: 85%" data-progress="85%"></span>
+                <span data-progress="85%"></span>
               </div>
             </div>
           </div>
@@ -90,31 +92,31 @@
             <div class="prog-holder">
               <h4>HTML</h4>
               <div class="progress">
-                <span style="width: 80%" data-progress="80%"></span>
+                <span data-progress="80%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>CSS</h4>
               <div class="progress">
-                <span style="width: 70%" data-progress="70%"></span>
+                <span data-progress="65%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>JavaScript</h4>
               <div class="progress">
-                <span style="width: 70%" data-progress="70%"></span>
+                <span data-progress="70%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>C++</h4>
               <div class="progress">
-                <span style="width: 85%" data-progress="85%"></span>
+                <span data-progress="85%"></span>
               </div>
             </div>
             <div class="prog-holder">
               <h4>Python</h4>
               <div class="progress">
-                <span style="width: 65%" data-progress="65%"></span>
+                <span data-progress="65%"></span>
               </div>
             </div>
           </div>
@@ -123,37 +125,89 @@
     </div>
     <!-- Projects -->
     <div class="projects" id="projects">
-      <div class="container">
-        <div class="main-heading">
-          <h2>Projects</h2>
-        </div>
-        <div class="projects-container">
-          <div class="project-items">
-            <div class="project-item active">
+      <div class="main-heading">
+        <h2>Projects</h2>
+      </div>
+      <div id="projectSlider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="item">
               <a href="https://github.com/BeshoyMorad/LogicSim" target="blank">
-                <img src="Images/logic_sim.png" alt="Logic Simulator"></a>
-            </div>
-            <div class="project-item">
-              <a href="https://github.com/BeshoyMorad/Hangman_Game" target="blank">
-                <img src="Images/hangman.png" alt="HangMan Game"></a>
-            </div>
-            <div class="project-item">
-              <a href="https://github.com/BeshoyMorad/ToDo_List" target="blank">
-                <img src="Images/todo_list.png" alt="ToDo List"></a>
-            </div>
-            <div class="project-item">
-              <a href="https://github.com/BeshoyMorad/MarsStation" target="blank">
-                <img src="Images/mars_station.png" alt="Mars Station"></a>
-            </div>
-            <div class="project-item">
-              <a href="https://github.com/BeshoyMorad/Control_Local_Storage" target="blank">
-                <img src="Images/local_storage.png" alt="Local Storage"></a>
+                <img src="Images/logic_sim.png" alt="Logic Simulator">
+              </a>
             </div>
           </div>
-          <span class="next">&gt;</span>
-          <span class="prev">&lt;</span>
+          <div class="carousel-item">
+            <div class="item">
+              <a href="https://github.com/BeshoyMorad/Hangman_Game" target="blank">
+                <img src="Images/hangman.png" alt="HangMan Game">
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="item">
+              <a href="https://github.com/BeshoyMorad/ToDo_List" target="blank">
+                <img src="Images/todo_list.png" alt="ToDo List">
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="item">
+              <a href="https://github.com/BeshoyMorad/MarsStation" target="blank">
+                <img src="Images/mars_station.png" alt="Mars Station">
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="item">
+              <a href="https://github.com/BeshoyMorad/Control_Local_Storage" target="blank">
+                <img src="Images/local_storage.png" alt="Local Storage">
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="item">
+              <a href="https://github.com/BeshoyMorad/Quiz_App" target="blank">
+                <img src="Images/quiz_app.png" alt="Quiz App">
+              </a>
+            </div>
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectSlider" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectSlider" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+      <!-- <div class="projects-container">
+        <div class="project-items">
+          <div class="project-item active">
+            <a href="https://github.com/BeshoyMorad/LogicSim" target="blank">
+              <img src="Images/logic_sim.png" alt="Logic Simulator"></a>
+          </div>
+          <div class="project-item">
+            <a href="https://github.com/BeshoyMorad/Hangman_Game" target="blank">
+              <img src="Images/hangman.png" alt="HangMan Game"></a>
+          </div>
+          <div class="project-item">
+            <a href="https://github.com/BeshoyMorad/ToDo_List" target="blank">
+              <img src="Images/todo_list.png" alt="ToDo List"></a>
+          </div>
+          <div class="project-item">
+            <a href="https://github.com/BeshoyMorad/MarsStation" target="blank">
+              <img src="Images/mars_station.png" alt="Mars Station"></a>
+          </div>
+          <div class="project-item">
+            <a href="https://github.com/BeshoyMorad/Control_Local_Storage" target="blank">
+              <img src="Images/local_storage.png" alt="Local Storage"></a>
+          </div>
+        </div>
+        <span class="next">&gt;</span>
+        <span class="prev">&lt;</span>
+      </div> -->
     </div>
     <!-- Contact -->
     <div class="contact" id="contact">
@@ -177,6 +231,9 @@
       </div>
       <p>Created by <span>Beshoy Morad</span></p>
     </div>
+    <script src="JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="JavaScript/popper.min.js"></script>
+    <script src="JavaScript/bootstrap.min.js"></script>
     <script src="JavaScript/main.js"></script>
   </body>
 </html>

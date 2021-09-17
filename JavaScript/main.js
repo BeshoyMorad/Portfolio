@@ -13,40 +13,39 @@ document.addEventListener(`click`, (e) => {
     }
   }
 })
-
 let ageSpan = document.getElementById(`age`);
 let todayDate = new Date();
 ageSpan.innerText = todayDate.getFullYear() - 2002;
 
 
-//Projects Functions
-let nextButton = document.querySelector(`.projects .projects-container .next`);
-let prevButton = document.querySelector(`.projects .projects-container .prev`);
-let projectItems = document.querySelector(`.projects .projects-container .project-items`).children;
-let projectCount = projectItems.length;
-let index = 0;
 
-nextButton.onclick = function() {
-  if (index < projectCount - 1) {
-    index++;
-  }else {
-    index = 0;
-  }
-  slide();
+//Scroll to top button
+let toTopBtn = document.getElementById(`to-top-btn`);
+
+toTopBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
 
-prevButton.onclick = function() {
-  if (index > 0) {
-    index--;
-  }else {
-    index = projectCount - 1;
-  }
-  slide();
-}
 
-function slide() {
-  for (var i = 0; i < projectCount; i++) {
-    projectItems[i].classList.remove(`active`);
-  };
-  projectItems[index].classList.add(`active`);
+
+//Progress Bar Function
+let skills = document.getElementById(`skills`);
+let progressBar = document.querySelectorAll(`.prog-holder .progress span`);
+
+
+window.onscroll = function() {
+  //scroll to top button
+  this.scrollY >= 550? toTopBtn.classList.add(`show`) : toTopBtn.classList.remove(`show`);
+
+
+  //progress bar
+  if (this.scrollY > (skills.offsetTop / 2)) {
+    progressBar.forEach(progBar => {
+      progBar.style.width = progBar.dataset.progress;
+      progBar.classList.add(`animate`);
+    })
+  }
 }
