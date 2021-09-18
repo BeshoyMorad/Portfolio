@@ -29,23 +29,21 @@ toTopBtn.onclick = function() {
   });
 }
 
+window.addEventListener(`scroll`, function() {
+  this.scrollY >= 550? toTopBtn.classList.add(`show`) : toTopBtn.classList.remove(`show`);
+});
+
 
 
 //Progress Bar Function
 let skills = document.getElementById(`skills`);
 let progressBar = document.querySelectorAll(`.prog-holder .progress span`);
 
-
-window.onscroll = function() {
-  //scroll to top button
-  this.scrollY >= 550? toTopBtn.classList.add(`show`) : toTopBtn.classList.remove(`show`);
-
-
-  //progress bar
+window.addEventListener(`scroll`, function() {
   if (this.scrollY > (skills.offsetTop / 2)) {
     progressBar.forEach(progBar => {
       progBar.style.width = progBar.dataset.progress;
       progBar.classList.add(`animate`);
     })
   }
-}
+});
