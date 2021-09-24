@@ -136,7 +136,7 @@ header nav ul li:hover a {
     width: calc(100% - 10px);
     position: absolute;
     flex-direction: column;
-    top: 97px;
+    top: 81px;
     right: 5px;
     padding: 8px 20px;
     border-radius: 0 0 15px 15px;
